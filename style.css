@@ -1,0 +1,861 @@
+/* =========================================================
+   FALAQ HOLDINGS LTD.
+   Luxury Corporate Website
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ---------- ROOT ---------- */
+
+:root {
+    --black: #0b0b0b;
+    --dark: #111111;
+    --dark-soft: #171717;
+    --cream: #f5f2eb;
+    --white: #ffffff;
+    --gold: #c9a96e;
+    --gold-light: #e0c58b;
+    --gray: #a7a7a7;
+    --gray-dark: #686868;
+    --border: rgba(201, 169, 110, 0.22);
+    --max-width: 1240px;
+}
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ---------- GENERAL ---------- */
+
+.container {
+    width: min(90%, var(--max-width));
+    margin: 0 auto;
+}
+
+section {
+    position: relative;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-label::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: var(--gold);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(38px, 5vw, 68px);
+}
+
+p {
+    color: #b8b8b8;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11, 11, 11, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-inner {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-main {
+    color: var(--gold-light);
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.logo-sub {
+    color: #999;
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-top: 7px;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.main-navigation a {
+    color: #d0d0d0;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover {
+    color: var(--gold-light);
+}
+
+.header-button {
+    padding: 12px 21px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.header-button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(201, 169, 110, 0.14), transparent 30%),
+        linear-gradient(135deg, #0b0b0b 0%, #141414 55%, #090909 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.25)),
+        linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(201,169,110,0.13);
+    border-radius: 50%;
+    right: -180px;
+    bottom: -220px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding-top: 80px;
+}
+
+.hero-eyebrow {
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: clamp(58px, 8vw, 112px);
+    letter-spacing: -3px;
+    max-width: 1000px;
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 18px;
+    color: #b5b5b5;
+    margin-top: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 42px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 35px;
+    left: 5%;
+    z-index: 3;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+    background: var(--cream);
+    color: var(--black);
+}
+
+.about p {
+    color: #555;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about h2 {
+    color: var(--black);
+}
+
+.about .section-label {
+    color: #8d6b34;
+}
+
+.about .section-label::before {
+    background: #8d6b34;
+}
+
+.about-text {
+    font-size: 18px;
+    margin-top: 28px;
+    max-width: 650px;
+}
+
+.about-highlight {
+    margin-top: 35px;
+    padding-left: 25px;
+    border-left: 2px solid #b4935b;
+    color: #222;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+/* ---------- BUSINESSES ---------- */
+
+.businesses {
+    background: var(--dark);
+}
+
+.section-heading {
+    max-width: 780px;
+    margin-bottom: 65px;
+}
+
+.section-heading p {
+    margin-top: 22px;
+    font-size: 17px;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.business-card {
+    min-height: 310px;
+    padding: 38px;
+    background: #151515;
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.business-card::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    right: -60px;
+    bottom: -60px;
+    border: 1px solid rgba(201,169,110,0.18);
+    border-radius: 50%;
+}
+
+.business-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--border);
+}
+
+.business-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.business-card h3 {
+    margin-top: 55px;
+    font-size: 30px;
+}
+
+.business-card p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* ---------- APPROACH ---------- */
+
+.approach {
+    background: #0d0d0d;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.approach-item {
+    border-top: 1px solid var(--border);
+    padding-top: 25px;
+}
+
+.approach-number {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.approach-item h3 {
+    margin: 22px 0 12px;
+    font-size: 31px;
+}
+
+/* ---------- VISION ---------- */
+
+.vision {
+    background: var(--cream);
+    color: var(--black);
+    text-align: center;
+}
+
+.vision p {
+    color: #555;
+}
+
+.vision-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision h2 {
+    margin-top: 10px;
+}
+
+.vision-text {
+    margin: 30px auto 0;
+    font-size: 18px;
+    max-width: 750px;
+}
+
+/* ---------- FUTURE ---------- */
+
+.future {
+    background:
+        linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.95)),
+        radial-gradient(circle at center, rgba(201,169,110,0.12), transparent 55%);
+}
+
+.future-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.future h2 {
+    max-width: 700px;
+}
+
+.future-text {
+    margin-top: 25px;
+    max-width: 650px;
+    font-size: 17px;
+}
+
+.future-list {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--border);
+}
+
+.future-list-item {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.future-list-item span:first-child {
+    color: var(--gold-light);
+}
+
+.future-list-item span:last-child {
+    color: #777;
+}
+
+/* ---------- VALUES ---------- */
+
+.values {
+    background: var(--dark);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    padding: 35px 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #131313;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-size: 14px;
+}
+
+/* ---------- OPPORTUNITIES ---------- */
+
+.opportunities {
+    background: var(--cream);
+    color: var(--black);
+}
+
+.opportunities p {
+    color: #555;
+}
+
+.opportunities-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.opportunities h2 {
+    max-width: 700px;
+}
+
+.opportunities-text {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    background: #0a0a0a;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.contact h2 {
+    margin-bottom: 25px;
+}
+
+.contact-description {
+    max-width: 550px;
+}
+
+.contact-details {
+    border-top: 1px solid var(--border);
+}
+
+.contact-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-item small {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.contact-item a:hover {
+    color: var(--gold-light);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #070707;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 65px 0 25px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+
+.footer-brand p {
+    max-width: 420px;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #999;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--gold-light);
+}
+
+.copyright {
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeUp 1s ease both;
+}
+
+.business-card,
+.value-card,
+.approach-item {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1000px) {
+
+    .main-navigation {
+        gap: 18px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .about-grid,
+    .future-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .business-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-grid {
+        gap: 30px;
+    }
+
+    .opportunities-inner {
+        display: block;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(91%, 600px);
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .site-header {
+        position: fixed;
+    }
+
+    .header-inner {
+        min-height: 72px;
+    }
+
+    .logo-main {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+
+    .logo-sub {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .main-navigation {
+        display: none;
+    }
+
+    .hero {
+        min-height: 92vh;
+    }
+
+    .hero-content {
+        padding-top: 90px;
+    }
+
+    .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 75px);
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        margin-top: 22px;
+    }
+
+    .hero-actions {
+        margin-top: 30px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    .about-highlight {
+        font-size: 18px;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-card {
+        min-height: 270px;
+        padding: 30px;
+    }
+
+    .business-card h3 {
+        margin-top: 45px;
+        font-size: 28px;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .future-grid {
+        gap: 45px;
+    }
+
+    .contact-grid {
+        gap: 45px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}
+
+/* ---------- VERY SMALL MOBILE ---------- */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .business-card {
+        padding: 25px;
+    }
+}
