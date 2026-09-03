@@ -2221,3 +2221,26 @@ input {
         padding: 18px;
     }
 }
+/* ==============================
+   THEME TOGGLE
+   ============================== */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--gold-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
