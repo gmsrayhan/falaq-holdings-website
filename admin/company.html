@@ -1,1 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Company Profile | Falaq Holdings Ltd.</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <img
+                    src="../falaq-logo.jpeg"
+                    alt="Falaq Holdings Ltd."
+                >
+
+                <div>
+                    <h1>Falaq Holdings Ltd.</h1>
+                    <p>ADMINISTRATION PANEL</p>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="company.html" class="nav-item active">
+                    <span class="nav-icon">▣</span>
+                    <span>Company Profile</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">◈</span>
+                    <span>Businesses & Brands</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    <span>News & Blog</span>
+                    <span class="nav-badge">0</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">✦</span>
+                    <span>Future & Opportunities</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">✉</span>
+                    <span>Messages</span>
+                    <span class="nav-badge">0</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙</span>
+                    <span>Website Settings</span>
+                </a>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section-title">
+                    USERS & PERMISSIONS
+                </div>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    <span>Users Management</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">◉</span>
+                    <span>Role & Permissions</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-role">
+
+                <div class="role-icon">★</div>
+
+                <div>
+                    <span>Current Role</span>
+                    <strong>MAIN ADMIN</strong>
+                    <small>Full Access</small>
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-footer">
+
+                Falaq Holdings Ltd.
+
+                <span>Administration Panel</span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <div class="dashboard-content">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button
+                        class="menu-button"
+                        type="button"
+                    >
+                        ☰
+                    </button>
+
+                    <div>
+
+                        <span class="header-label">
+                            ADMINISTRATION
+                        </span>
+
+                        <h2>Company Profile</h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <div class="admin-profile">
+
+                        <div class="admin-avatar">
+                            M
+                        </div>
+
+                        <div class="admin-info">
+
+                            <strong>Main Admin</strong>
+
+                            <span>Administrator</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="logoutButton"
+                        class="secondary-action"
+                    >
+                        Sign Out
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- MAIN -->
+
+            <main class="dashboard-main">
+
+
+                <section class="welcome-section">
+
+                    <div>
+
+                        <p class="dashboard-label">
+                            COMPANY INFORMATION
+                        </p>
+
+                        <h1>
+                            Company Profile
+                        </h1>
+
+                        <p>
+                            Manage the information displayed
+                            on the Falaq Holdings Ltd. website.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- COMPANY PROFILE FORM -->
+
+                <section class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Basic Information
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="companyForm">
+
+
+                        <div class="form-group">
+
+                            <label for="companyName">
+                                Company Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="companyName"
+                                name="companyName"
+                                value="Falaq Holdings Ltd."
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="tagline">
+                                Tagline
+                            </label>
+
+                            <input
+                                type="text"
+                                id="tagline"
+                                name="tagline"
+                                value="Building Businesses. Creating Possibilities."
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="description">
+                                Company Description
+                            </label>
+
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="6"
+                            >Falaq Holdings Ltd. is a developing business group bringing together ventures across different areas of business and consumer services.</textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Contact Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value="info@falaqall.com"
+                            >
+
+                        </div>
+
+
+                        <div class="panel-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-action"
+                            >
+                                Save Changes
+                            </button>
+
+                            <a
+                                href="dashboard.html"
+                                class="secondary-action"
+                            >
+                                Cancel
+                            </a>
+
+                        </div>
+
+
+                        <div
+                            id="companyMessage"
+                            class="login-message"
+                        ></div>
+
+
+                    </form>
+
+                </section>
+
+
+                <!-- COMPANY VISION -->
+
+                <section
+                    class="dashboard-panel"
+                    style="margin-top:18px;"
+                >
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Vision & Direction
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="visionForm">
+
+
+                        <div class="form-group">
+
+                            <label for="vision">
+                                Vision
+                            </label>
+
+                            <textarea
+                                id="vision"
+                                name="vision"
+                                rows="5"
+                            >Creating Businesses That Matter.</textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="future">
+                                Future Direction
+                            </label>
+
+                            <textarea
+                                id="future"
+                                name="future"
+                                rows="5"
+                            >The Future Starts With Ideas.</textarea>
+
+                        </div>
+
+
+                        <div class="panel-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-action"
+                            >
+                                Save Changes
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="visionMessage"
+                            class="login-message"
+                        ></div>
+
+
+                    </form>
+
+                </section>
+
+
+            </main>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <span>
+                    © 2026 Falaq Holdings Ltd. All rights reserved.
+                </span>
+
+                <span>
+                    Administration Panel
+                </span>
+
+            </footer>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
