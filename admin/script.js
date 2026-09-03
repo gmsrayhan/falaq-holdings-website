@@ -1,226 +1,317 @@
 /* =====================================================
    FALAQ HOLDINGS LTD.
-   Admin Panel JavaScript
+   Secure Supabase Authentication
    ===================================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+const SUPABASE_URL =
+    "https://vhktiuhkvpvwugpibxbh.supabase.co";
 
-    /* ==============================
-       LOGIN ELEMENTS
-       ============================== */
-
-    const loginForm = document.getElementById("loginForm");
-    const passwordInput = document.getElementById("password");
-    const togglePassword = document.getElementById("togglePassword");
-    const loginMessage = document.getElementById("loginMessage");
-    const rememberCheckbox = document.getElementById("remember");
+const SUPABASE_KEY =
+    "sb_publishable_F1lBNaoYiI0nX45r1a4ItQ_fjq991lC";
 
 
-    /* ==============================
-       SHOW / HIDE PASSWORD
-       ============================== */
+/* ==============================
+   LOAD SUPABASE
+   ============================== */
 
-    if (togglePassword && passwordInput) {
+const supabaseScript = document.createElement("script");
 
-        togglePassword.addEventListener("click", function () {
+supabaseScript.src =
+    "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js";
 
-            if (passwordInput.type === "password") {
+supabaseScript.onload = function () {
 
-                passwordInput.type = "text";
-                togglePassword.textContent = "Hide";
-
-            } else {
-
-                passwordInput.type = "password";
-                togglePassword.textContent = "Show";
-
-            }
-
-        });
-
-    }
+    const supabaseClient =
+        window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_KEY
+        );
 
 
     /* ==============================
-       REMEMBER ME
+       LOGIN PAGE
        ============================== */
 
-    const savedEmail =
-        localStorage.getItem("falaq_admin_email");
+    const loginForm =
+        document.getElementById("loginForm");
 
-    if (savedEmail) {
+    if (loginForm) {
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        const loginMessage =
+            document.getElementById("loginMessage");
+
+        const rememberCheckbox =
+            document.getElementById("remember");
 
         const emailInput =
             document.getElementById("email");
 
-        if (emailInput) {
-            emailInput.value = savedEmail;
-        }
 
-        if (rememberCheckbox) {
-            rememberCheckbox.checked = true;
-        }
+        /* Show / Hide Password */
 
-    }
+        if (togglePassword && passwordInput) {
 
+            togglePassword.addEventListener(
+                "click",
+                function () {
 
-    /* ==============================
-       LOGIN FORM
-       ============================== */
+                    if (
+                        passwordInput.type ===
+                        "password"
+                    ) {
 
-    if (loginForm) {
+                        passwordInput.type =
+                            "text";
 
-        loginForm.addEventListener("submit", function (event) {
+                        togglePassword.textContent =
+                            "Hide";
 
-            event.preventDefault();
+                    } else {
 
-            const emailInput =
-                document.getElementById("email");
+                        passwordInput.type =
+                            "password";
 
-            const email =
-                emailInput.value.trim();
-
-            const password =
-                passwordInput.value.trim();
-
-
-            /* Clear previous message */
-
-            if (loginMessage) {
-
-                loginMessage.textContent = "";
-                loginMessage.className =
-                    "login-message";
-
-            }
-
-
-            /* Check empty fields */
-
-            if (!email || !password) {
-
-                if (loginMessage) {
-
-                    loginMessage.textContent =
-                        "Please enter your email address and password.";
-
-                    loginMessage.classList.add("error");
+                        togglePassword.textContent =
+                            "Show";
+                    }
 
                 }
+            );
+        }
 
-                return;
 
+        /* Remember Email */
+
+        const savedEmail =
+            localStorage.getItem(
+                "falaq_admin_email"
+            );
+
+        if (savedEmail && emailInput) {
+
+            emailInput.value =
+                savedEmail;
+
+            if (rememberCheckbox) {
+                rememberCheckbox.checked = true;
             }
+        }
 
 
-            /* Remember email */
+        /* Login */
 
-            if (
-                rememberCheckbox &&
-                rememberCheckbox.checked
-            ) {
-
-                localStorage.setItem(
-                    "falaq_admin_email",
-                    email
-                );
-
-            } else {
-
-                localStorage.removeItem(
-                    "falaq_admin_email"
-                );
-
-            }
-
-
-            /* Temporary login message */
-
-            if (loginMessage) {
-
-                loginMessage.textContent =
-                    "Login system is being prepared.";
-
-                loginMessage.classList.add("success");
-
-            }
-
-
-            /*
-             * IMPORTANT:
-             *
-             * This is currently a static GitHub Pages website.
-             *
-             * Real admin authentication will be connected later
-             * using a secure authentication/backend system.
-             *
-             * Never store a real admin password in this JavaScript file.
-             */
-
-        });
-
-    }
-
-
-    /* ==============================
-       FORGOT PASSWORD
-       ============================== */
-
-    const forgotPassword =
-        document.querySelector(".forgot-password");
-
-    if (forgotPassword) {
-
-        forgotPassword.addEventListener(
-            "click",
-            function (event) {
+        loginForm.addEventListener(
+            "submit",
+            async function (event) {
 
                 event.preventDefault();
 
-                if (loginMessage) {
+                const email =
+                    emailInput.value.trim();
+
+                const password =
+                    passwordInput.value;
+
+
+                if (!email || !password) {
 
                     loginMessage.textContent =
-                        "Password recovery will be available after the secure authentication system is connected.";
+                        "Please enter your email and password.";
 
                     loginMessage.className =
-                        "login-message";
+                        "login-message error";
 
+                    return;
                 }
+
+
+                loginMessage.textContent =
+                    "Signing in...";
+
+                loginMessage.className =
+                    "login-message";
+
+
+                const { data, error } =
+                    await supabaseClient.auth
+                        .signInWithPassword({
+                            email: email,
+                            password: password
+                        });
+
+
+                if (error) {
+
+                    loginMessage.textContent =
+                        "Invalid email or password.";
+
+                    loginMessage.className =
+                        "login-message error";
+
+                    return;
+                }
+
+
+                if (
+                    rememberCheckbox &&
+                    rememberCheckbox.checked
+                ) {
+
+                    localStorage.setItem(
+                        "falaq_admin_email",
+                        email
+                    );
+
+                } else {
+
+                    localStorage.removeItem(
+                        "falaq_admin_email"
+                    );
+                }
+
+
+                loginMessage.textContent =
+                    "Login successful. Opening dashboard...";
+
+                loginMessage.className =
+                    "login-message success";
+
+
+                setTimeout(function () {
+
+                    window.location.href =
+                        "dashboard.html";
+
+                }, 700);
 
             }
         );
 
+
+        /* Forgot Password */
+
+        const forgotPassword =
+            document.querySelector(
+                ".forgot-password"
+            );
+
+        if (forgotPassword) {
+
+            forgotPassword.addEventListener(
+                "click",
+                async function (event) {
+
+                    event.preventDefault();
+
+                    const email =
+                        emailInput.value.trim();
+
+                    if (!email) {
+
+                        loginMessage.textContent =
+                            "Enter your email address first.";
+
+                        loginMessage.className =
+                            "login-message error";
+
+                        return;
+                    }
+
+
+                    const { error } =
+                        await supabaseClient.auth
+                            .resetPasswordForEmail(
+                                email,
+                                {
+                                    redirectTo:
+                                        window.location
+                                            .origin +
+                                        "/admin/index.html"
+                                }
+                            );
+
+
+                    if (error) {
+
+                        loginMessage.textContent =
+                            "Unable to send password reset email.";
+
+                        loginMessage.className =
+                            "login-message error";
+
+                    } else {
+
+                        loginMessage.textContent =
+                            "Password reset email sent.";
+
+                        loginMessage.className =
+                            "login-message success";
+                    }
+
+                }
+            );
+        }
     }
 
 
     /* ==============================
-       DASHBOARD SIGN OUT
+       DASHBOARD PROTECTION
        ============================== */
 
-    const logoutButton =
-        document.getElementById("logoutButton");
+    const dashboard =
+        document.querySelector(".dashboard");
 
-    if (logoutButton) {
+    if (dashboard) {
 
-        logoutButton.addEventListener(
-            "click",
-            function () {
+        supabaseClient.auth
+            .getSession()
+            .then(function (result) {
 
-                /*
-                 * Remove temporary admin session data
-                 * when secure authentication is connected.
-                 */
+                const session =
+                    result.data.session;
 
-                localStorage.removeItem(
-                    "falaq_admin_session"
-                );
+                if (!session) {
 
-                window.location.href =
-                    "index.html";
+                    window.location.href =
+                        "index.html";
 
-            }
-        );
+                }
 
+            });
+
+
+        /* Sign Out */
+
+        const logoutButton =
+            document.getElementById(
+                "logoutButton"
+            );
+
+        if (logoutButton) {
+
+            logoutButton.addEventListener(
+                "click",
+                async function () {
+
+                    await supabaseClient.auth
+                        .signOut();
+
+                    window.location.href =
+                        "index.html";
+
+                }
+            );
+        }
     }
 
-});
+};
+
+document.head.appendChild(
+    supabaseScript
+);
