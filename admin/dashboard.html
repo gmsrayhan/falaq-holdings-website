@@ -35,30 +35,47 @@
 
         <nav class="sidebar-nav">
 
-            <a href="#" class="nav-item active">
+            <!-- DASHBOARD -->
+
+            <a href="dashboard.html" class="nav-item active">
                 <span class="nav-icon">⌂</span>
                 <span>Dashboard</span>
             </a>
+
+
+            <!-- COMPANY PROFILE -->
 
             <a href="company.html" class="nav-item">
                 <span class="nav-icon">▣</span>
                 <span>Company Profile</span>
             </a>
 
+
+            <!-- BUSINESSES -->
+
             <a href="#" class="nav-item">
                 <span class="nav-icon">◇</span>
                 <span>Businesses &amp; Brands</span>
             </a>
+
+
+            <!-- NEWS -->
 
             <a href="#" class="nav-item">
                 <span class="nav-icon">▤</span>
                 <span>News &amp; Blog</span>
             </a>
 
+
+            <!-- FUTURE -->
+
             <a href="#" class="nav-item">
                 <span class="nav-icon">✧</span>
                 <span>Future &amp; Opportunities</span>
             </a>
+
+
+            <!-- MESSAGES -->
 
             <a href="#" class="nav-item">
                 <span class="nav-icon">✉</span>
@@ -66,21 +83,32 @@
                 <span class="nav-badge">5</span>
             </a>
 
+
+            <!-- SETTINGS -->
+
             <a href="#" class="nav-item">
                 <span class="nav-icon">⚙</span>
                 <span>Website Settings</span>
             </a>
 
+
             <div class="sidebar-divider"></div>
+
 
             <p class="sidebar-section-title">
                 USERS &amp; PERMISSIONS
             </p>
 
+
+            <!-- USERS -->
+
             <a href="#" class="nav-item">
                 <span class="nav-icon">♙</span>
                 <span>Users Management</span>
             </a>
+
+
+            <!-- ROLES -->
 
             <a href="#" class="nav-item">
                 <span class="nav-icon">♢</span>
@@ -89,6 +117,8 @@
 
         </nav>
 
+
+        <!-- CURRENT ROLE -->
 
         <div class="sidebar-role">
 
@@ -102,6 +132,8 @@
 
         </div>
 
+
+        <!-- SIDEBAR FOOTER -->
 
         <div class="sidebar-footer">
 
@@ -120,25 +152,41 @@
     <div class="dashboard-content">
 
 
-        <!-- HEADER -->
+        <!-- =========================
+             HEADER
+        ========================== -->
 
         <header class="dashboard-header">
 
             <div class="header-left">
 
-                <button class="menu-button" id="menuButton">
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                >
                     ☰
                 </button>
 
                 <div>
-                    <p class="header-label">ADMINISTRATION</p>
-                    <h2>Dashboard</h2>
+
+                    <p class="header-label">
+                        ADMINISTRATION
+                    </p>
+
+                    <h2>
+                        Dashboard
+                    </h2>
+
                 </div>
 
             </div>
 
 
             <div class="header-right">
+
+
+                <!-- THEME TOGGLE -->
 
                 <button
                     type="button"
@@ -149,11 +197,19 @@
                     ☀️
                 </button>
 
-                <button class="notification-button">
+
+                <!-- NOTIFICATIONS -->
+
+                <button
+                    type="button"
+                    class="notification-button"
+                >
                     ♧
                     <span>3</span>
                 </button>
 
+
+                <!-- ADMIN PROFILE -->
 
                 <div class="admin-profile">
 
@@ -162,18 +218,31 @@
                     </div>
 
                     <div class="admin-info">
-                        <strong>Main Admin</strong>
-                        <span>Administrator</span>
+
+                        <strong>
+                            Main Admin
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
                     </div>
 
-                    <span class="profile-arrow">⌄</span>
+                    <span class="profile-arrow">
+                        ⌄
+                    </span>
 
                 </div>
 
 
+                <!-- LOGOUT -->
+
                 <button
+                    type="button"
                     class="logout-button"
-                    id="logoutButton">
+                    id="logoutButton"
+                >
                     SIGN OUT
                 </button>
 
@@ -189,7 +258,9 @@
         <main class="dashboard-main">
 
 
-            <!-- WELCOME -->
+            <!-- =========================
+                 WELCOME
+            ========================== -->
 
             <section class="welcome-section">
 
@@ -213,11 +284,20 @@
 
                 <div class="dashboard-date">
 
-                    <span>◷</span>
+                    <span>
+                        ◷
+                    </span>
 
                     <div>
-                        <strong>03 Sep 2026</strong>
-                        <small>Administration Overview</small>
+
+                        <strong>
+                            03 Sep 2026
+                        </strong>
+
+                        <small>
+                            Administration Overview
+                        </small>
+
                     </div>
 
                 </div>
@@ -232,6 +312,8 @@
             <section class="stats-grid">
 
 
+                <!-- BUSINESSES -->
+
                 <div class="stat-card">
 
                     <div class="stat-icon">
@@ -240,9 +322,13 @@
 
                     <div class="stat-content">
 
-                        <span>Total Businesses</span>
+                        <span>
+                            Total Businesses
+                        </span>
 
-                        <strong>6</strong>
+                        <strong>
+                            6
+                        </strong>
 
                         <a href="#">
                             View All →
@@ -252,6 +338,8 @@
 
                 </div>
 
+
+                <!-- NEWS -->
 
                 <div class="stat-card">
 
@@ -261,9 +349,13 @@
 
                     <div class="stat-content">
 
-                        <span>Total News &amp; Blog</span>
+                        <span>
+                            Total News &amp; Blog
+                        </span>
 
-                        <strong>0</strong>
+                        <strong>
+                            0
+                        </strong>
 
                         <a href="#">
                             View All →
@@ -273,6 +365,8 @@
 
                 </div>
 
+
+                <!-- MESSAGES -->
 
                 <div class="stat-card">
 
@@ -282,9 +376,13 @@
 
                     <div class="stat-content">
 
-                        <span>Total Messages</span>
+                        <span>
+                            Total Messages
+                        </span>
 
-                        <strong>0</strong>
+                        <strong>
+                            0
+                        </strong>
 
                         <a href="#">
                             View All →
@@ -295,6 +393,8 @@
                 </div>
 
 
+                <!-- ADMINS -->
+
                 <div class="stat-card">
 
                     <div class="stat-icon">
@@ -303,9 +403,13 @@
 
                     <div class="stat-content">
 
-                        <span>Total Admins</span>
+                        <span>
+                            Total Admins
+                        </span>
 
-                        <strong>1</strong>
+                        <strong>
+                            1
+                        </strong>
 
                         <a href="#">
                             View All →
@@ -319,29 +423,44 @@
 
 
             <!-- =========================
-                 MAIN DASHBOARD GRID
+                 DASHBOARD GRID
             ========================== -->
 
             <section class="dashboard-grid">
 
 
-                <!-- COMPANY PROFILE -->
+                <!-- =========================
+                     COMPANY PROFILE
+                ========================== -->
 
                 <div class="dashboard-panel company-panel">
 
                     <div class="panel-header">
 
                         <div>
-                            <span class="panel-number">01</span>
-                            <h3>Company Profile</h3>
+
+                            <span class="panel-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Company Profile
+                            </h3>
+
                         </div>
 
-                        <span class="panel-arrow">→</span>
+                        <a
+                            href="company.html"
+                            class="panel-arrow"
+                        >
+                            →
+                        </a>
 
                     </div>
 
 
                     <div class="company-content">
+
 
                         <img
                             src="../falaq-logo.jpeg"
@@ -349,11 +468,13 @@
                             class="company-logo"
                         >
 
+
                         <div class="company-details">
 
                             <h4>
                                 Falaq Holdings Ltd.
                             </h4>
+
 
                             <p>
                                 Manage company information,
@@ -361,12 +482,20 @@
                                 content.
                             </p>
 
+
                             <p class="last-updated">
+
                                 Last Updated:
-                                <strong>—</strong>
+
+                                <strong>
+                                    —
+                                </strong>
+
                             </p>
 
+
                             <div class="panel-actions">
+
 
                                 <a
                                     href="company.html"
@@ -375,12 +504,14 @@
                                     Edit Profile
                                 </a>
 
+
                                 <a
                                     href="company.html"
                                     class="secondary-action"
                                 >
                                     View Details
                                 </a>
+
 
                             </div>
 
@@ -391,18 +522,29 @@
                 </div>
 
 
-                <!-- BUSINESSES -->
+                <!-- =========================
+                     BUSINESSES
+                ========================== -->
 
                 <div class="dashboard-panel">
 
                     <div class="panel-header">
 
                         <div>
-                            <span class="panel-number">02</span>
-                            <h3>Businesses &amp; Brands</h3>
+
+                            <span class="panel-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Businesses &amp; Brands
+                            </h3>
+
                         </div>
 
-                        <span class="panel-arrow">→</span>
+                        <span class="panel-arrow">
+                            →
+                        </span>
 
                     </div>
 
@@ -417,62 +559,118 @@
 
 
                         <div class="business-item">
-                            <strong>Falaq Holdings</strong>
-                            <span>Supply &amp; Tourism Agency</span>
+
+                            <strong>
+                                Falaq Holdings
+                            </strong>
+
+                            <span>
+                                Supply &amp; Tourism Agency
+                            </span>
+
                         </div>
 
 
                         <div class="business-item">
-                            <strong>Mr.Bongo</strong>
-                            <span>Men's Collection</span>
+
+                            <strong>
+                                Mr.Bongo
+                            </strong>
+
+                            <span>
+                                Men's Collection
+                            </span>
+
                         </div>
 
 
                         <div class="business-item">
-                            <strong>Mrs.Bongo</strong>
-                            <span>Women's Collection</span>
+
+                            <strong>
+                                Mrs.Bongo
+                            </strong>
+
+                            <span>
+                                Women's Collection
+                            </span>
+
                         </div>
 
 
                         <div class="business-item">
-                            <strong>Nuha HairZen</strong>
-                            <span>Hair Care</span>
+
+                            <strong>
+                                Nuha HairZen
+                            </strong>
+
+                            <span>
+                                Hair Care
+                            </span>
+
                         </div>
 
 
                         <div class="business-item">
-                            <strong>Nuha's Collection</strong>
-                            <span>Women's Collection</span>
+
+                            <strong>
+                                Nuha's Collection
+                            </strong>
+
+                            <span>
+                                Women's Collection
+                            </span>
+
                         </div>
 
 
                         <div class="business-item">
-                            <strong>Falaq Express</strong>
-                            <span>Bus Service</span>
+
+                            <strong>
+                                Falaq Express
+                            </strong>
+
+                            <span>
+                                Bus Service
+                            </span>
+
                         </div>
 
                     </div>
 
 
-                    <a href="#" class="panel-footer-link">
+                    <a
+                        href="#"
+                        class="panel-footer-link"
+                    >
                         Manage Businesses →
                     </a>
 
                 </div>
 
 
-                <!-- NEWS -->
+                <!-- =========================
+                     NEWS
+                ========================== -->
 
                 <div class="dashboard-panel">
 
                     <div class="panel-header">
 
                         <div>
-                            <span class="panel-number">03</span>
-                            <h3>News &amp; Blog</h3>
+
+                            <span class="panel-number">
+                                03
+                            </span>
+
+                            <h3>
+                                News &amp; Blog
+                            </h3>
+
                         </div>
 
-                        <span class="panel-arrow">→</span>
+                        <span class="panel-arrow">
+                            →
+                        </span>
 
                     </div>
 
@@ -485,7 +683,9 @@
 
                     <div class="empty-content">
 
-                        <span class="empty-icon">▤</span>
+                        <span class="empty-icon">
+                            ▤
+                        </span>
 
                         <p>
                             No news or blog posts yet.
@@ -499,25 +699,41 @@
 
 
                     <p class="last-updated">
+
                         Last Updated:
-                        <strong>—</strong>
+
+                        <strong>
+                            —
+                        </strong>
+
                     </p>
 
                 </div>
 
 
-                <!-- FUTURE -->
+                <!-- =========================
+                     FUTURE
+                ========================== -->
 
                 <div class="dashboard-panel">
 
                     <div class="panel-header">
 
                         <div>
-                            <span class="panel-number">04</span>
-                            <h3>Future &amp; Opportunities</h3>
+
+                            <span class="panel-number">
+                                04
+                            </span>
+
+                            <h3>
+                                Future &amp; Opportunities
+                            </h3>
+
                         </div>
 
-                        <span class="panel-arrow">→</span>
+                        <span class="panel-arrow">
+                            →
+                        </span>
 
                     </div>
 
@@ -530,46 +746,94 @@
 
                     <div class="future-list">
 
-                        <div>
-                            <strong>New Ventures</strong>
-                            <span>Future business opportunities</span>
-                            <a href="#">View →</a>
-                        </div>
 
                         <div>
-                            <strong>Partnerships</strong>
-                            <span>Business collaboration</span>
-                            <a href="#">View →</a>
+
+                            <strong>
+                                New Ventures
+                            </strong>
+
+                            <span>
+                                Future business opportunities
+                            </span>
+
+                            <a href="#">
+                                View →
+                            </a>
+
                         </div>
 
+
                         <div>
-                            <strong>Opportunities</strong>
-                            <span>Potential growth areas</span>
-                            <a href="#">View →</a>
+
+                            <strong>
+                                Partnerships
+                            </strong>
+
+                            <span>
+                                Business collaboration
+                            </span>
+
+                            <a href="#">
+                                View →
+                            </a>
+
                         </div>
+
+
+                        <div>
+
+                            <strong>
+                                Opportunities
+                            </strong>
+
+                            <span>
+                                Potential growth areas
+                            </span>
+
+                            <a href="#">
+                                View →
+                            </a>
+
+                        </div>
+
 
                     </div>
 
 
-                    <a href="#" class="panel-footer-link">
+                    <a
+                        href="#"
+                        class="panel-footer-link"
+                    >
                         Manage Future &amp; Opportunities →
                     </a>
 
                 </div>
 
 
-                <!-- MESSAGES -->
+                <!-- =========================
+                     MESSAGES
+                ========================== -->
 
                 <div class="dashboard-panel">
 
                     <div class="panel-header">
 
                         <div>
-                            <span class="panel-number">05</span>
-                            <h3>Messages</h3>
+
+                            <span class="panel-number">
+                                05
+                            </span>
+
+                            <h3>
+                                Messages
+                            </h3>
+
                         </div>
 
-                        <span class="panel-arrow">→</span>
+                        <span class="panel-arrow">
+                            →
+                        </span>
 
                     </div>
 
@@ -582,7 +846,9 @@
 
                     <div class="message-empty">
 
-                        <span>✉</span>
+                        <span>
+                            ✉
+                        </span>
 
                         <strong>
                             No messages yet
@@ -596,25 +862,39 @@
                     </div>
 
 
-                    <a href="#" class="panel-footer-link">
+                    <a
+                        href="#"
+                        class="panel-footer-link"
+                    >
                         View All Messages →
                     </a>
 
                 </div>
 
 
-                <!-- SETTINGS -->
+                <!-- =========================
+                     SETTINGS
+                ========================== -->
 
                 <div class="dashboard-panel">
 
                     <div class="panel-header">
 
                         <div>
-                            <span class="panel-number">06</span>
-                            <h3>Website Settings</h3>
+
+                            <span class="panel-number">
+                                06
+                            </span>
+
+                            <h3>
+                                Website Settings
+                            </h3>
+
                         </div>
 
-                        <span class="panel-arrow">→</span>
+                        <span class="panel-arrow">
+                            →
+                        </span>
 
                     </div>
 
@@ -627,25 +907,53 @@
 
                     <div class="settings-list">
 
-                        <div>
-                            <span>Website Information</span>
-                            <strong>→</strong>
-                        </div>
 
                         <div>
-                            <span>Contact Information</span>
-                            <strong>→</strong>
+
+                            <span>
+                                Website Information
+                            </span>
+
+                            <strong>
+                                →
+                            </strong>
+
                         </div>
 
+
                         <div>
-                            <span>Administration Settings</span>
-                            <strong>→</strong>
+
+                            <span>
+                                Contact Information
+                            </span>
+
+                            <strong>
+                                →
+                            </strong>
+
                         </div>
+
+
+                        <div>
+
+                            <span>
+                                Administration Settings
+                            </span>
+
+                            <strong>
+                                →
+                            </strong>
+
+                        </div>
+
 
                     </div>
 
 
-                    <a href="#" class="panel-footer-link">
+                    <a
+                        href="#"
+                        class="panel-footer-link"
+                    >
                         Open Settings →
                     </a>
 
@@ -684,7 +992,9 @@
 
                 <div class="activity-empty">
 
-                    <span>◷</span>
+                    <span>
+                        ◷
+                    </span>
 
                     <div>
 
@@ -709,7 +1019,9 @@
         </main>
 
 
-        <!-- FOOTER -->
+        <!-- =========================
+             FOOTER
+        ========================== -->
 
         <footer class="dashboard-footer">
 
@@ -727,6 +1039,10 @@
 
 </div>
 
+
+<!-- =========================
+     ADMIN SCRIPT
+========================== -->
 
 <script src="script.js"></script>
 
