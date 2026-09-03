@@ -9,7 +9,7 @@ const SUPABASE_URL =
     "https://vhktiuhkvpvwugpibxbh.supabase.co";
 
 const SUPABASE_KEY =
-    "sb_publishable_F1lBNaoYiI0nX45r1a4ItQ_fjq991lC";
+    "sb_publishable_F1lBNaoYi0I0nX45r1a4ItQ_fjq991lC";
 
 
 /* =====================================================
@@ -84,7 +84,15 @@ function setupThemeToggle() {
 
         }
     );
+
 }
+
+
+/* =====================================================
+   START THEME SYSTEM
+   ===================================================== */
+
+setupThemeToggle();
 
 
 /* =====================================================
@@ -162,7 +170,6 @@ supabaseScript.onload =
                     "click",
                     function () {
 
-
                         if (
                             passwordInput.type ===
                             "password"
@@ -181,6 +188,7 @@ supabaseScript.onload =
 
                             togglePassword.textContent =
                                 "Show";
+
                         }
 
                     }
@@ -226,7 +234,6 @@ supabaseScript.onload =
                 "submit",
                 async function (event) {
 
-
                     event.preventDefault();
 
 
@@ -246,10 +253,8 @@ supabaseScript.onload =
                         loginMessage.textContent =
                             "Please enter your email and password.";
 
-
                         loginMessage.className =
                             "login-message error";
-
 
                         return;
 
@@ -259,13 +264,11 @@ supabaseScript.onload =
                     loginMessage.textContent =
                         "Signing in...";
 
-
                     loginMessage.className =
                         "login-message";
 
 
                     const {
-                        data,
                         error
                     } =
                         await supabaseClient.auth
@@ -283,10 +286,8 @@ supabaseScript.onload =
                         loginMessage.textContent =
                             "Invalid email or password.";
 
-
                         loginMessage.className =
                             "login-message error";
-
 
                         return;
 
@@ -316,7 +317,6 @@ supabaseScript.onload =
 
                     loginMessage.textContent =
                         "Login successful. Opening dashboard...";
-
 
                     loginMessage.className =
                         "login-message success";
@@ -348,11 +348,9 @@ supabaseScript.onload =
 
             if (forgotPassword) {
 
-
                 forgotPassword.addEventListener(
                     "click",
                     async function (event) {
-
 
                         event.preventDefault();
 
@@ -366,10 +364,8 @@ supabaseScript.onload =
                             loginMessage.textContent =
                                 "Enter your email address first.";
 
-
                             loginMessage.className =
                                 "login-message error";
-
 
                             return;
 
@@ -398,7 +394,6 @@ supabaseScript.onload =
                             loginMessage.textContent =
                                 "Unable to send password reset email.";
 
-
                             loginMessage.className =
                                 "login-message error";
 
@@ -406,7 +401,6 @@ supabaseScript.onload =
 
                             loginMessage.textContent =
                                 "Password reset email sent.";
-
 
                             loginMessage.className =
                                 "login-message success";
@@ -439,7 +433,6 @@ supabaseScript.onload =
                 .then(
                     function (result) {
 
-
                         const session =
                             result.data.session;
 
@@ -467,11 +460,9 @@ supabaseScript.onload =
 
             if (logoutButton) {
 
-
                 logoutButton.addEventListener(
                     "click",
                     async function () {
-
 
                         await supabaseClient.auth
                             .signOut();
@@ -486,13 +477,6 @@ supabaseScript.onload =
             }
 
         }
-
-
-        /* =================================================
-           START THEME SYSTEM
-           ================================================= */
-
-        setupThemeToggle();
 
     };
 
