@@ -1,9 +1,13 @@
 /* =====================================================
    FALAQ HOLDINGS LTD.
-   Admin Login JavaScript
+   Admin Panel JavaScript
    ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==============================
+       LOGIN ELEMENTS
+       ============================== */
 
     const loginForm = document.getElementById("loginForm");
     const passwordInput = document.getElementById("password");
@@ -41,11 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
        REMEMBER ME
        ============================== */
 
-    const savedEmail = localStorage.getItem("falaq_admin_email");
+    const savedEmail =
+        localStorage.getItem("falaq_admin_email");
 
     if (savedEmail) {
 
-        const emailInput = document.getElementById("email");
+        const emailInput =
+            document.getElementById("email");
 
         if (emailInput) {
             emailInput.value = savedEmail;
@@ -68,34 +74,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
             event.preventDefault();
 
-            const emailInput = document.getElementById("email");
+            const emailInput =
+                document.getElementById("email");
 
-            const email = emailInput.value.trim();
-            const password = passwordInput.value.trim();
+            const email =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value.trim();
 
 
             /* Clear previous message */
 
-            loginMessage.textContent = "";
-            loginMessage.className = "login-message";
+            if (loginMessage) {
+
+                loginMessage.textContent = "";
+                loginMessage.className =
+                    "login-message";
+
+            }
 
 
             /* Check empty fields */
 
             if (!email || !password) {
 
-                loginMessage.textContent =
-                    "Please enter your email address and password.";
+                if (loginMessage) {
 
-                loginMessage.classList.add("error");
+                    loginMessage.textContent =
+                        "Please enter your email address and password.";
+
+                    loginMessage.classList.add("error");
+
+                }
 
                 return;
+
             }
 
 
             /* Remember email */
 
-            if (rememberCheckbox && rememberCheckbox.checked) {
+            if (
+                rememberCheckbox &&
+                rememberCheckbox.checked
+            ) {
 
                 localStorage.setItem(
                     "falaq_admin_email",
@@ -104,28 +127,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } else {
 
-                localStorage.removeItem("falaq_admin_email");
+                localStorage.removeItem(
+                    "falaq_admin_email"
+                );
 
             }
 
 
             /* Temporary login message */
 
-            loginMessage.textContent =
-                "Login system is being prepared.";
+            if (loginMessage) {
 
-            loginMessage.classList.add("success");
+                loginMessage.textContent =
+                    "Login system is being prepared.";
+
+                loginMessage.classList.add("success");
+
+            }
 
 
             /*
              * IMPORTANT:
              *
-             * This website is currently hosted on GitHub Pages.
-             * GitHub Pages cannot securely handle real admin
-             * authentication or passwords.
+             * This is currently a static GitHub Pages website.
              *
-             * Real authentication will be connected later
-             * with a secure backend/authentication service.
+             * Real admin authentication will be connected later
+             * using a secure authentication/backend system.
+             *
+             * Never store a real admin password in this JavaScript file.
              */
 
         });
@@ -142,17 +171,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (forgotPassword) {
 
-        forgotPassword.addEventListener("click", function (event) {
+        forgotPassword.addEventListener(
+            "click",
+            function (event) {
 
-            event.preventDefault();
+                event.preventDefault();
 
-            loginMessage.textContent =
-                "Password recovery will be available after the secure authentication system is connected.";
+                if (loginMessage) {
 
-            loginMessage.className =
-                "login-message";
+                    loginMessage.textContent =
+                        "Password recovery will be available after the secure authentication system is connected.";
 
-        });
+                    loginMessage.className =
+                        "login-message";
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* ==============================
+       DASHBOARD SIGN OUT
+       ============================== */
+
+    const logoutButton =
+        document.getElementById("logoutButton");
+
+    if (logoutButton) {
+
+        logoutButton.addEventListener(
+            "click",
+            function () {
+
+                /*
+                 * Remove temporary admin session data
+                 * when secure authentication is connected.
+                 */
+
+                localStorage.removeItem(
+                    "falaq_admin_session"
+                );
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
 
     }
 
