@@ -2244,3 +2244,116 @@ input {
     border-color: var(--gold);
     transform: translateY(-2px);
 }
+/* ==============================
+   LIGHT / DAY THEME
+   ============================== */
+
+body.light-theme {
+    --black: #f4f1e8;
+    --black-soft: #ebe7dc;
+    --card: #ffffff;
+    --card-soft: #f8f6ef;
+    --white: #171717;
+    --white-soft: #4d4a43;
+    --gray: #66625b;
+    --gray-dark: #858078;
+    --gray-soft: #aaa49a;
+    --border: rgba(157, 125, 66, 0.25);
+    --border-soft: rgba(0, 0, 0, 0.08);
+
+    background: #f4f1e8;
+    color: var(--white);
+}
+
+body.light-theme .dashboard {
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(201,168,106,0.08),
+            transparent 30%
+        ),
+        #f4f1e8;
+}
+
+body.light-theme .sidebar {
+    background: linear-gradient(
+        180deg,
+        #fffdf8 0%,
+        #f1eee5 100%
+    );
+    border-right-color: rgba(157,125,66,0.22);
+}
+
+body.light-theme .sidebar-brand {
+    border-bottom-color: rgba(0,0,0,0.07);
+}
+
+body.light-theme .nav-item {
+    color: #716d65;
+}
+
+body.light-theme .nav-item:hover {
+    color: #171717;
+    background: rgba(0,0,0,0.035);
+}
+
+body.light-theme .nav-item.active {
+    color: #8a6a32;
+    background: rgba(201,168,106,0.13);
+}
+
+body.light-theme .dashboard-header {
+    background: rgba(244,241,232,0.92);
+    border-bottom-color: rgba(157,125,66,0.18);
+}
+
+body.light-theme .stat-card,
+body.light-theme .dashboard-panel,
+body.light-theme .activity-panel {
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.08);
+}
+
+body.light-theme .stat-card:hover,
+body.light-theme .dashboard-panel:hover {
+    border-color: rgba(157,125,66,0.30);
+}
+
+body.light-theme .dashboard-date,
+body.light-theme .notification-button,
+body.light-theme .theme-toggle {
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.10);
+}
+
+body.light-theme .empty-content,
+body.light-theme .message-empty,
+body.light-theme .activity-empty {
+    background: #faf9f5;
+    border-color: rgba(0,0,0,0.09);
+}
+
+body.light-theme .business-item,
+body.light-theme .future-list > div {
+    background: #faf9f5;
+    border-color: rgba(0,0,0,0.07);
+}
+
+body.light-theme .sidebar-footer {
+    border-top-color: rgba(0,0,0,0.07);
+    color: #8b867d;
+}
+
+body.light-theme .sidebar-footer span {
+    color: #aaa49a;
+}
+
+body.light-theme .sidebar-role {
+    background: rgba(201,168,106,0.08);
+    border-color: rgba(157,125,66,0.20);
+}
+
+body.light-theme .dashboard-footer {
+    border-top-color: rgba(0,0,0,0.08);
+    color: #8b867d;
+}
