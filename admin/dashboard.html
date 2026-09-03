@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dashboard | Falaq Holdings Ltd.</title>
+    <title>Admin Dashboard | Falaq Holdings Ltd.</title>
 
     <meta name="robots" content="noindex, nofollow">
 
@@ -13,151 +13,707 @@
 
 <body>
 
-    <div class="dashboard">
+<div class="dashboard">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <img src="../falaq-logo.jpeg" alt="Falaq Holdings Ltd.">
+
+            <div>
+                <h1>Falaq Holdings Ltd.</h1>
+                <p>ADMINISTRATION PANEL</p>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span>Company Profile</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>Businesses &amp; Brands</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>News &amp; Blog</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">✧</span>
+                <span>Future &amp; Opportunities</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">✉</span>
+                <span>Messages</span>
+                <span class="nav-badge">5</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Website Settings</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <p class="sidebar-section-title">
+                USERS &amp; PERMISSIONS
+            </p>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Users Management</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>Role &amp; Permissions</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-role">
+
+            <div class="role-icon">♛</div>
+
+            <div>
+                <span>Current Role</span>
+                <strong>MAIN ADMIN</strong>
+                <small>Full Access</small>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-footer">
+
+            <p>© 2026 Falaq Holdings Ltd.</p>
+            <span>Admin Panel V1.0</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN AREA
+    ========================== -->
+
+    <div class="dashboard-content">
+
+
+        <!-- HEADER -->
 
         <header class="dashboard-header">
 
-            <div class="dashboard-brand">
-                <img src="../falaq-logo.jpeg" alt="Falaq Holdings Ltd.">
+            <div class="header-left">
+
+                <button class="menu-button" id="menuButton">
+                    ☰
+                </button>
+
                 <div>
-                    <h1>Falaq Holdings Ltd.</h1>
-                    <p>Administration Panel</p>
+                    <p class="header-label">ADMINISTRATION</p>
+                    <h2>Dashboard</h2>
                 </div>
+
             </div>
 
-            <button class="logout-button" id="logoutButton">
-                Sign Out
-            </button>
+
+            <div class="header-right">
+
+                <button class="notification-button">
+                    ♧
+                    <span>3</span>
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="admin-avatar">
+                        A
+                    </div>
+
+                    <div class="admin-info">
+                        <strong>Main Admin</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <span class="profile-arrow">⌄</span>
+
+                </div>
+
+
+                <button
+                    class="logout-button"
+                    id="logoutButton">
+                    SIGN OUT
+                </button>
+
+            </div>
 
         </header>
 
 
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
         <main class="dashboard-main">
+
+
+            <!-- WELCOME -->
 
             <section class="welcome-section">
 
-                <p class="dashboard-label">ADMINISTRATION</p>
+                <div>
 
-                <h2>Welcome Back</h2>
+                    <p class="dashboard-label">
+                        OVERVIEW
+                    </p>
 
-                <p>
-                    Manage your company website, businesses, brands,
-                    news and future content from one place.
-                </p>
+                    <h1>
+                        Welcome back, Main Admin
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your
+                        website today.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-date">
+
+                    <span>◷</span>
+
+                    <div>
+                        <strong>03 Sep 2026</strong>
+                        <small>Administration Overview</small>
+                    </div>
+
+                </div>
 
             </section>
 
 
+            <!-- =========================
+                 STATISTICS
+            ========================== -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ◫
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Total Businesses</span>
+
+                        <strong>6</strong>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ▤
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Total News &amp; Blog</span>
+
+                        <strong>0</strong>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✉
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Total Messages</span>
+
+                        <strong>0</strong>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ♙
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>Total Admins</span>
+
+                        <strong>1</strong>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 MAIN DASHBOARD GRID
+            ========================== -->
+
             <section class="dashboard-grid">
 
-                <a href="#" class="dashboard-card">
 
-                    <span class="card-number">01</span>
+                <!-- COMPANY PROFILE -->
 
-                    <h3>Company Profile</h3>
+                <div class="dashboard-panel company-panel">
 
-                    <p>
-                        Manage company information, vision,
-                        mission and corporate content.
-                    </p>
+                    <div class="panel-header">
 
-                    <span class="card-link">Manage →</span>
+                        <div>
+                            <span class="panel-number">01</span>
+                            <h3>Company Profile</h3>
+                        </div>
 
-                </a>
+                        <span class="panel-arrow">→</span>
+
+                    </div>
 
 
-                <a href="#" class="dashboard-card">
+                    <div class="company-content">
 
-                    <span class="card-number">02</span>
+                        <img
+                            src="../falaq-logo.jpeg"
+                            alt="Falaq Holdings Ltd."
+                            class="company-logo"
+                        >
 
-                    <h3>Businesses & Brands</h3>
+                        <div class="company-details">
 
-                    <p>
+                            <h4>
+                                Falaq Holdings Ltd.
+                            </h4>
+
+                            <p>
+                                Manage company information,
+                                vision, mission and corporate
+                                content.
+                            </p>
+
+                            <p class="last-updated">
+                                Last Updated:
+                                <strong>—</strong>
+                            </p>
+
+                            <div class="panel-actions">
+
+                                <a href="#" class="primary-action">
+                                    Edit Profile
+                                </a>
+
+                                <a href="#" class="secondary-action">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUSINESSES -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-number">02</span>
+                            <h3>Businesses &amp; Brands</h3>
+                        </div>
+
+                        <span class="panel-arrow">→</span>
+
+                    </div>
+
+
+                    <p class="panel-description">
                         Manage Falaq Holdings business units
                         and associated brands.
                     </p>
 
-                    <span class="card-link">Manage →</span>
 
-                </a>
+                    <div class="business-grid">
 
 
-                <a href="#" class="dashboard-card">
+                        <div class="business-item">
+                            <strong>Falaq Holdings</strong>
+                            <span>Supply &amp; Tourism Agency</span>
+                        </div>
 
-                    <span class="card-number">03</span>
 
-                    <h3>News & Blog</h3>
+                        <div class="business-item">
+                            <strong>Mr.Bongo</strong>
+                            <span>Men's Collection</span>
+                        </div>
 
-                    <p>
+
+                        <div class="business-item">
+                            <strong>Mrs.Bongo</strong>
+                            <span>Women's Collection</span>
+                        </div>
+
+
+                        <div class="business-item">
+                            <strong>Nuha HairZen</strong>
+                            <span>Hair Care</span>
+                        </div>
+
+
+                        <div class="business-item">
+                            <strong>Nuha's Collection</strong>
+                            <span>Women's Collection</span>
+                        </div>
+
+
+                        <div class="business-item">
+                            <strong>Falaq Express</strong>
+                            <span>Bus Service</span>
+                        </div>
+
+                    </div>
+
+
+                    <a href="#" class="panel-footer-link">
+                        Manage Businesses →
+                    </a>
+
+                </div>
+
+
+                <!-- NEWS -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-number">03</span>
+                            <h3>News &amp; Blog</h3>
+                        </div>
+
+                        <span class="panel-arrow">→</span>
+
+                    </div>
+
+
+                    <p class="panel-description">
                         Create and manage company news,
                         updates and articles.
                     </p>
 
-                    <span class="card-link">Manage →</span>
 
-                </a>
+                    <div class="empty-content">
+
+                        <span class="empty-icon">▤</span>
+
+                        <p>
+                            No news or blog posts yet.
+                        </p>
+
+                        <a href="#">
+                            Create First Post →
+                        </a>
+
+                    </div>
 
 
-                <a href="#" class="dashboard-card">
+                    <p class="last-updated">
+                        Last Updated:
+                        <strong>—</strong>
+                    </p>
 
-                    <span class="card-number">04</span>
+                </div>
 
-                    <h3>Future & Opportunities</h3>
 
-                    <p>
+                <!-- FUTURE -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-number">04</span>
+                            <h3>Future &amp; Opportunities</h3>
+                        </div>
+
+                        <span class="panel-arrow">→</span>
+
+                    </div>
+
+
+                    <p class="panel-description">
                         Manage future plans, opportunities
                         and partnership information.
                     </p>
 
-                    <span class="card-link">Manage →</span>
 
-                </a>
+                    <div class="future-list">
+
+                        <div>
+                            <strong>New Ventures</strong>
+                            <span>Future business opportunities</span>
+                            <a href="#">View →</a>
+                        </div>
+
+                        <div>
+                            <strong>Partnerships</strong>
+                            <span>Business collaboration</span>
+                            <a href="#">View →</a>
+                        </div>
+
+                        <div>
+                            <strong>Opportunities</strong>
+                            <span>Potential growth areas</span>
+                            <a href="#">View →</a>
+                        </div>
+
+                    </div>
 
 
-                <a href="#" class="dashboard-card">
+                    <a href="#" class="panel-footer-link">
+                        Manage Future &amp; Opportunities →
+                    </a>
 
-                    <span class="card-number">05</span>
+                </div>
 
-                    <h3>Messages</h3>
 
-                    <p>
+                <!-- MESSAGES -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-number">05</span>
+                            <h3>Messages</h3>
+                        </div>
+
+                        <span class="panel-arrow">→</span>
+
+                    </div>
+
+
+                    <p class="panel-description">
                         Review business enquiries and
                         contact messages.
                     </p>
 
-                    <span class="card-link">View →</span>
 
-                </a>
+                    <div class="message-empty">
+
+                        <span>✉</span>
+
+                        <strong>
+                            No messages yet
+                        </strong>
+
+                        <p>
+                            Incoming enquiries will
+                            appear here.
+                        </p>
+
+                    </div>
 
 
-                <a href="#" class="dashboard-card">
+                    <a href="#" class="panel-footer-link">
+                        View All Messages →
+                    </a>
 
-                    <span class="card-number">06</span>
+                </div>
 
-                    <h3>Website Settings</h3>
 
-                    <p>
+                <!-- SETTINGS -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-number">06</span>
+                            <h3>Website Settings</h3>
+                        </div>
+
+                        <span class="panel-arrow">→</span>
+
+                    </div>
+
+
+                    <p class="panel-description">
                         Manage general website settings
                         and administration preferences.
                     </p>
 
-                    <span class="card-link">Settings →</span>
 
-                </a>
+                    <div class="settings-list">
+
+                        <div>
+                            <span>Website Information</span>
+                            <strong>→</strong>
+                        </div>
+
+                        <div>
+                            <span>Contact Information</span>
+                            <strong>→</strong>
+                        </div>
+
+                        <div>
+                            <span>Administration Settings</span>
+                            <strong>→</strong>
+                        </div>
+
+                    </div>
+
+
+                    <a href="#" class="panel-footer-link">
+                        Open Settings →
+                    </a>
+
+                </div>
+
 
             </section>
+
+
+            <!-- =========================
+                 RECENT ACTIVITIES
+            ========================== -->
+
+            <section class="activity-panel">
+
+                <div class="activity-header">
+
+                    <div>
+
+                        <p class="dashboard-label">
+                            AUDIT INFORMATION
+                        </p>
+
+                        <h3>
+                            Recent Activities
+                        </h3>
+
+                    </div>
+
+                    <span>
+                        View All →
+                    </span>
+
+                </div>
+
+
+                <div class="activity-empty">
+
+                    <span>◷</span>
+
+                    <div>
+
+                        <strong>
+                            Activity tracking is ready
+                        </strong>
+
+                        <p>
+                            Editing, creating, cancelling,
+                            deleting and login activities
+                            will appear here once CMS
+                            management is connected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
 
         </main>
 
 
+        <!-- FOOTER -->
+
         <footer class="dashboard-footer">
-            © 2026 Falaq Holdings Ltd. All rights reserved.
+
+            <span>
+                © 2026 Falaq Holdings Ltd.
+            </span>
+
+            <span>
+                Admin Panel V1.0
+            </span>
+
         </footer>
 
     </div>
 
+</div>
 
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
