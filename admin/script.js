@@ -1,9 +1,8 @@
 /* =====================================================
    FALAQ HOLDINGS LTD.
-   Secure Supabase Authentication
+   Supabase Authentication
    + Premium Admin Theme Toggle
    ===================================================== */
-
 
 const SUPABASE_URL =
     "https://vhktiuhkvpvwugpibxbh.supabase.co";
@@ -25,29 +24,20 @@ function setupThemeToggle() {
         return;
     }
 
-
-    /* Load Saved Theme */
-
     const savedTheme =
         localStorage.getItem("falaq_theme");
-
 
     if (savedTheme === "light") {
 
         document.body.classList.add("light-theme");
-
         themeToggle.textContent = "☾";
 
     } else {
 
         document.body.classList.remove("light-theme");
-
         themeToggle.textContent = "☀";
 
     }
-
-
-    /* Toggle Theme */
 
     themeToggle.addEventListener(
         "click",
@@ -56,7 +46,6 @@ function setupThemeToggle() {
             document.body.classList.toggle(
                 "light-theme"
             );
-
 
             if (
                 document.body.classList.contains(
@@ -84,13 +73,7 @@ function setupThemeToggle() {
 
         }
     );
-
 }
-
-
-/* =====================================================
-   START THEME SYSTEM
-   ===================================================== */
 
 setupThemeToggle();
 
@@ -102,14 +85,11 @@ setupThemeToggle();
 const supabaseScript =
     document.createElement("script");
 
-
 supabaseScript.src =
     "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js";
 
-
 supabaseScript.onload =
     function () {
-
 
         const supabaseClient =
             window.supabase.createClient(
@@ -125,31 +105,25 @@ supabaseScript.onload =
         const loginForm =
             document.getElementById("loginForm");
 
-
         if (loginForm) {
-
 
             const passwordInput =
                 document.getElementById("password");
-
 
             const togglePassword =
                 document.getElementById(
                     "togglePassword"
                 );
 
-
             const loginMessage =
                 document.getElementById(
                     "loginMessage"
                 );
 
-
             const rememberCheckbox =
                 document.getElementById(
                     "remember"
                 );
-
 
             const emailInput =
                 document.getElementById(
@@ -193,7 +167,6 @@ supabaseScript.onload =
 
                     }
                 );
-
             }
 
 
@@ -206,7 +179,6 @@ supabaseScript.onload =
                     "falaq_admin_email"
                 );
 
-
             if (
                 savedEmail &&
                 emailInput
@@ -214,7 +186,6 @@ supabaseScript.onload =
 
                 emailInput.value =
                     savedEmail;
-
 
                 if (rememberCheckbox) {
 
@@ -236,14 +207,11 @@ supabaseScript.onload =
 
                     event.preventDefault();
 
-
                     const email =
                         emailInput.value.trim();
 
-
                     const password =
                         passwordInput.value;
-
 
                     if (
                         !email ||
@@ -257,9 +225,7 @@ supabaseScript.onload =
                             "login-message error";
 
                         return;
-
                     }
-
 
                     loginMessage.textContent =
                         "Signing in...";
@@ -283,6 +249,11 @@ supabaseScript.onload =
 
                     if (error) {
 
+                        console.error(
+                            "Login Error:",
+                            error
+                        );
+
                         loginMessage.textContent =
                             "Invalid email or password.";
 
@@ -290,7 +261,6 @@ supabaseScript.onload =
                             "login-message error";
 
                         return;
-
                     }
 
 
@@ -345,7 +315,6 @@ supabaseScript.onload =
                     ".forgot-password"
                 );
 
-
             if (forgotPassword) {
 
                 forgotPassword.addEventListener(
@@ -353,7 +322,6 @@ supabaseScript.onload =
                     async function (event) {
 
                         event.preventDefault();
-
 
                         const email =
                             emailInput.value.trim();
@@ -368,8 +336,19 @@ supabaseScript.onload =
                                 "login-message error";
 
                             return;
-
                         }
+
+
+                        loginMessage.textContent =
+                            "Sending password reset email...";
+
+                        loginMessage.className =
+                            "login-message";
+
+
+                        const redirectUrl =
+                            window.location.origin +
+                            "/admin/reset-password.html";
 
 
                         const {
@@ -379,37 +358,38 @@ supabaseScript.onload =
                                 .resetPasswordForEmail(
                                     email,
                                     {
-
                                         redirectTo:
-                                            window.location
-                                                .origin +
-                                            "/admin/reset-password.html"
-
+                                            redirectUrl
                                     }
                                 );
 
 
                         if (error) {
 
+                            console.error(
+                                "Password Reset Error:",
+                                error
+                            );
+
                             loginMessage.textContent =
-                                "Unable to send password reset email.";
+                                "Reset error: " +
+                                error.message;
 
                             loginMessage.className =
                                 "login-message error";
 
-                        } else {
-
-                            loginMessage.textContent =
-                                "Password reset email sent.";
-
-                            loginMessage.className =
-                                "login-message success";
-
+                            return;
                         }
+
+
+                        loginMessage.textContent =
+                            "Password reset email sent. Please check your Gmail.";
+
+                        loginMessage.className =
+                            "login-message success";
 
                     }
                 );
-
             }
 
         }
@@ -424,9 +404,7 @@ supabaseScript.onload =
                 ".dashboard"
             );
 
-
         if (dashboard) {
-
 
             supabaseClient.auth
                 .getSession()
@@ -435,7 +413,6 @@ supabaseScript.onload =
 
                         const session =
                             result.data.session;
-
 
                         if (!session) {
 
@@ -457,7 +434,6 @@ supabaseScript.onload =
                     "logoutButton"
                 );
 
-
             if (logoutButton) {
 
                 logoutButton.addEventListener(
@@ -467,13 +443,11 @@ supabaseScript.onload =
                         await supabaseClient.auth
                             .signOut();
 
-
                         window.location.href =
                             "index.html";
 
                     }
                 );
-
             }
 
         }
@@ -482,7 +456,7 @@ supabaseScript.onload =
 
 
 /* =====================================================
-   LOAD SUPABASE SCRIPT
+   START SUPABASE SCRIPT
    ===================================================== */
 
 document.head.appendChild(
