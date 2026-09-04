@@ -383,7 +383,7 @@ supabaseScript.onload =
                                         redirectTo:
                                             window.location
                                                 .origin +
-                                            "/admin/index.html"
+                                            "/admin/reset-password.html"
 
                                     }
                                 );
