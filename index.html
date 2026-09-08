@@ -1,1 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Falaq Holdings Ltd. | Building Businesses. Creating Possibilities.</title>
+
+  <meta
+    name="description"
+    content="Falaq Holdings Ltd. is a diversified business group focused on building businesses, developing opportunities and creating long-term value."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Falaq Holdings Ltd.">
+
+  <link rel="canonical" href="https://falaqholdingsltd.com/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      background: #ffffff;
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #111827;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #6b7280;
+      margin-top: -3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #000000;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      background: #f8fafc;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6b7280;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 19px;
+      color: #4b5563;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #111827;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: #000000;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      padding: 32px;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .about {
+      background: #f8fafc;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 40px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    .contact-box {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 40px;
+      background: #ffffff;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 30px 0;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        min-height: 70px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .cards,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .about h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        FALAQ HOLDINGS LTD.
+        <span>BUILDING BUSINESSES. CREATING POSSIBILITIES.</span>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#business">Business</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Falaq Holdings Ltd.</span>
+
+          <h1>
+            Building Businesses.<br>
+            Creating Possibilities.
+          </h1>
+
+          <p>
+            A diversified business group focused on building businesses,
+            developing opportunities and creating long-term value.
+          </p>
+
+          <a class="button" href="#about">Discover Falaq Holdings</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">About Us</span>
+          <h2>Building a foundation for sustainable growth.</h2>
+          <p>
+            Falaq Holdings Ltd. is developing a modern corporate platform
+            designed to connect businesses, opportunities and people.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="business" class="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div>
+            <span class="eyebrow">Our Business</span>
+            <h2>Multiple opportunities. One growing group.</h2>
+          </div>
+
+          <div>
+            <p>
+              Our business platform is being developed to support diverse
+              commercial activities while maintaining a strong focus on
+              professionalism, responsible growth and long-term value.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-title">
+          <span class="eyebrow">Our Approach</span>
+          <h2>Focused on creating lasting value.</h2>
+        </div>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>Growth</h3>
+            <p>
+              Building opportunities with a long-term perspective and
+              disciplined approach.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Partnership</h3>
+            <p>
+              Creating strong relationships that support sustainable
+              business development.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Possibility</h3>
+            <p>
+              Exploring new ideas and opportunities that can create
+              meaningful business value.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="about">
+      <div class="container">
+
+        <div class="contact-box">
+          <span class="eyebrow">Contact</span>
+
+          <h2>Let's build possibilities together.</h2>
+
+          <p style="margin: 15px 0 25px; color: #6b7280;">
+            Our official contact channels will be published here as the
+            corporate website develops.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Falaq Holdings Ltd. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
